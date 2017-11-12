@@ -1,0 +1,25 @@
+@import '../../globals.scss';
+
+.MainWrapper {
+  flex: 5;
+  padding: 10px;
+
+  @media #{$medium-only} {
+    flex: 4;
+  }
+
+  .Main {
+    border: 1px solid $color-grey;
+    border-radius: 5px;
+
+    .MainHeading {
+      background-color: $color-lightgrey;
+      border-bottom: 1px solid $color-grey;
+      padding: 10px;
+    }
+
+    .MainBody {
+      padding: 10px;
+    }
+  }
+}

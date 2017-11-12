@@ -1,0 +1,13 @@
+$color-blue: rgba(20,93,127,.8);
+$color-grey: #ddd;
+$color-lightgrey: #f5f5f5;
+$color-purple: #3f51b5;
+
+$small-screen: 600px !default;
+$small-screen-up: 601px !default;
+$medium-screen: 1050px !default;
+$medium-screen-up: 1051px !default;
+
+$small-and-down: "only screen and (max-width : #{$small-screen})" !default;
+$medium-and-down: "only screen and (max-width : #{$medium-screen})" !default;
+$medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width : #{$medium-screen})" !default;
