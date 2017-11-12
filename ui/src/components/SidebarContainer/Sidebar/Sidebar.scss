@@ -1,4 +1,4 @@
-@import '../../globals.scss';
+@import '../../../globals.scss';
 
 .SidebarWrapper {
   flex: 1;
@@ -30,20 +30,20 @@
         }
       }
     }
-    
+
     .SidebarBody {
       padding: 10px;
 
       .SidebarRow {
         padding-bottom: 10px;
-        
+
         .SidebarInputRange {
           padding: 20px 10px;
         }
-        
+
         .SidebarResetButton {
           text-align: center;
-  
+
           button {
             background: $color-grey;
             border: none;

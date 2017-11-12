@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import InputRange from 'react-input-range';
-import config from '../../config';
+import config from '../../../config';
 import styles from './Sidebar.scss';
 import 'react-input-range/lib/css/index.css';
 
@@ -34,14 +34,59 @@ class Sidebar extends Component {
     this.setState(prevState => ({ isCollapsed: !prevState.isCollapsed }));
   }
 
+  handleCheckboxChange = (e) => {
+    const { name, checked } = e.target;
+    if (checked) {
+      this.props.setFilter(name, checked, true);
+    } else {
+      this.props.removeFilter(name, true);
+    }
+  }
+
+  handleInputRangeChange = (nameMin, nameMax, value) => {
+    const { min, max } = value;
+    const { filters } = this.props;
+    if (min !== filters[nameMin]) {
+      this.props.setFilter(nameMin, min, false);
+    }
+    if (max !== filters[nameMax]) {
+      this.props.setFilter(nameMax, max, false);
+    }
+  }
+
+  handleInputRangeChangeComplete = () => {
+    // const { dispatch, filters } = this.props;
+    // dispatch(fetchMatches(filters));
+  }
+
+  handleInputRangeWithOpenBoundsChangeComplete = (name, boundValue) => {
+    const { filters } = this.props;
+    if (filters[name] === boundValue) {
+      this.props.removeFilter(name);
+    } else {
+      // dispatch(this.props.fetchMatches(filters));
+    }
+  }
+
+  getDefaultFilters = () => {
+    return {
+      compatibilityScoreMin: config.COMPATIBILITY_SCORE_MIN,
+      compatibilityScoreMax: config.COMPATIBILITY_SCORE_MAX,
+      ageMin: config.AGE_MIN,
+      heightMin: config.HEIGHT_MIN,
+      distanceMin: 0,
+      distanceMax: config.DISTANCE_MIN
+    }
+  }
+
+  handleResetButtonClick = (e) => {
+    e.preventDefault();
+    this.props.resetFilters(this.getDefaultFilters());
+  }
+
   render() {
     const {
-      filters,
-      handleCheckboxChange,
-      handleInputRangeChange,
-      handleInputRangeChangeComplete,
-      handleInputRangeWithOpenBoundsChangeComplete,
-      handleResetButtonClick
+      filters
     } = this.props;
     const toggleLinkText = this.state.isCollapsed ? 'More' : 'Less';
     return (
@@ -59,7 +104,7 @@ class Sidebar extends Component {
                   name="hasPhoto"
                   type="checkbox"
                   checked={filters.hasPhoto || false}
-                  onChange={handleCheckboxChange}
+                  onChange={this.handleCheckboxChange}
                 />
                 <span> </span>
                 <label htmlFor="hasPhoto">Has photo</label>
@@ -70,7 +115,7 @@ class Sidebar extends Component {
                   name="hasExchanged"
                   type="checkbox"
                   checked={filters.hasExchanged || false}
-                  onChange={handleCheckboxChange}
+                  onChange={this.handleCheckboxChange}
                 />
                 <span> </span>
                 <label htmlFor="hasExchanged">In contact</label>
@@ -81,7 +126,7 @@ class Sidebar extends Component {
                   name="isFavourite"
                   type="checkbox"
                   checked={filters.isFavourite || false}
-                  onChange={handleCheckboxChange}
+                  onChange={this.handleCheckboxChange}
                 />
                 <span> </span>
                 <label htmlFor="isFavourite">Favourite</label>
@@ -93,8 +138,8 @@ class Sidebar extends Component {
                     formatLabel={value => formatCompatibilityScoreLabel(value)}
                     minValue={config.COMPATIBILITY_SCORE_MIN}
                     maxValue={config.COMPATIBILITY_SCORE_MAX}
-                    onChange={value => handleInputRangeChange('compatibilityScoreMin', 'compatibilityScoreMax', value)}
-                    onChangeComplete={value => handleInputRangeChangeComplete()}
+                    onChange={value => this.handleInputRangeChange('compatibilityScoreMin', 'compatibilityScoreMax', value)}
+                    onChangeComplete={value => this.handleInputRangeChangeComplete()}
                     step={0.01}
                     value={{
                       min: filters.compatibilityScoreMin || config.COMPATIBILITY_SCORE_MIN,
@@ -110,8 +155,8 @@ class Sidebar extends Component {
                     formatLabel={value => formatAgeLabel(value)}
                     minValue={config.AGE_MIN}
                     maxValue={config.AGE_MAX}
-                    onChange={value => handleInputRangeChange('ageMin', 'ageMax', value)}
-                    onChangeComplete={value => handleInputRangeWithOpenBoundsChangeComplete('ageMax', config.AGE_MAX)}
+                    onChange={value => this.handleInputRangeChange('ageMin', 'ageMax', value)}
+                    onChangeComplete={value => this.handleInputRangeWithOpenBoundsChangeComplete('ageMax', config.AGE_MAX)}
                     value={{
                       min: filters.ageMin || config.AGE_MIN,
                       max: filters.ageMax || config.AGE_MAX
@@ -126,8 +171,8 @@ class Sidebar extends Component {
                     formatLabel={value => formatHeightLabel(value)}
                     minValue={config.HEIGHT_MIN}
                     maxValue={config.HEIGHT_MAX}
-                    onChange={value => handleInputRangeChange('heightMin', 'heightMax', value)}
-                    onChangeComplete={value => handleInputRangeWithOpenBoundsChangeComplete('heightMax', config.HEIGHT_MAX)}
+                    onChange={value => this.handleInputRangeChange('heightMin', 'heightMax', value)}
+                    onChangeComplete={value => this.handleInputRangeWithOpenBoundsChangeComplete('heightMax', config.HEIGHT_MAX)}
                     value={{
                       min: filters.heightMin || config.HEIGHT_MIN,
                       max: filters.heightMax || config.HEIGHT_MAX
@@ -142,15 +187,15 @@ class Sidebar extends Component {
                     formatLabel={value => formatDistanceLabel(value)}
                     minValue={config.DISTANCE_MIN}
                     maxValue={config.DISTANCE_MAX}
-                    onChange={value => handleInputRangeChange('distanceMin', 'distanceMax', { min: 0, max: value })}
-                    onChangeComplete={value => handleInputRangeWithOpenBoundsChangeComplete('distanceMax', config.DISTANCE_MAX)}
+                    onChange={value => this.handleInputRangeChange('distanceMin', 'distanceMax', { min: 0, max: value })}
+                    onChangeComplete={value => this.handleInputRangeWithOpenBoundsChangeComplete('distanceMax', config.DISTANCE_MAX)}
                     value={filters.distanceMax || config.DISTANCE_MAX}
                   />
                 </div>
               </div>
               <div className={styles.SidebarRow}>
                 <div className={styles.SidebarResetButton}>
-                  <button onClick={handleResetButtonClick}>Reset</button>
+                  <button onClick={this.handleResetButtonClick}>Reset</button>
                 </div>
               </div>
             </div>
@@ -163,11 +208,9 @@ class Sidebar extends Component {
 
 Sidebar.propTypes = {
   filters: PropTypes.object.isRequired,
-  handleCheckboxChange: PropTypes.func.isRequired,
-  handleInputRangeChange: PropTypes.func.isRequired,
-  handleInputRangeChangeComplete: PropTypes.func.isRequired,
-  handleInputRangeWithOpenBoundsChangeComplete: PropTypes.func.isRequired,
-  handleResetButtonClick: PropTypes.func.isRequired
+  setFilter: PropTypes.func.isRequired,
+  removeFilter: PropTypes.func.isRequired,
+  resetFilters: PropTypes.func.isRequired
 };
 
 export default Sidebar;
