@@ -1,38 +1,38 @@
 [
   {
-    "description": "Fugit consectetur cumque molestiae quia et commodi.",
-    "id": "Facilis ratione tempora.",
+    "description": "Dinner in Champs Elysee Description could be quite long",
+    "id": "123456",
     "organizer": {
-      "location": "Eos dolorem vero iste temporibus.",
-      "name": "Ut cupiditate quod aut iure in doloribus.",
-      "picture": "http://wintheiser.net/helmer"
+      "location": "geoLoc",
+      "name": "Robert0",
+      "picture": "https://randomuser.me/api/portraits/women/16.jpg"
     },
-    "picture": "http://mclaughlin.info/art_o'reilly",
+    "picture": "https://u.tfstatic.com/restaurant_photos/581/201581/169/612/kombi-bar-vue-de-la-salle-87e4b.jpg",
     "start": {},
-    "title": "Natus non excepturi laboriosam doloribus et."
+    "title": "Dinner in Champs Elysee"
   },
   {
-    "description": "Fugit consectetur cumque molestiae quia et commodi.",
-    "id": "Facilis ratione tempora.",
+    "description": "Dinner Eiffel Tower  Description could be quite long",
+    "id": "456789",
     "organizer": {
       "location": "Eos dolorem vero iste temporibus.",
       "name": "Ut cupiditate quod aut iure in doloribus.",
-      "picture": "http://wintheiser.net/helmer"
+      "picture": "https://randomuser.me/api/portraits/women/17.jpg"
     },
-    "picture": "http://mclaughlin.info/art_o'reilly",
+    "picture": "https://cdn.pixabay.com/photo/2017/04/07/01/01/bar-2209813_960_720.jpg",
     "start": {},
-    "title": "Natus non excepturi laboriosam doloribus et."
+    "title": "Dinner Eiffel Tower"
   },
   {
-    "description": "Fugit consectetur cumque molestiae quia et commodi.",
-    "id": "Facilis ratione tempora.",
+    "description": "Drinks a L'alimentation Generale Description could be quite long",
+    "id": "789123",
     "organizer": {
       "location": "Eos dolorem vero iste temporibus.",
       "name": "Ut cupiditate quod aut iure in doloribus.",
-      "picture": "http://wintheiser.net/helmer"
+      "picture": "https://randomuser.me/api/portraits/women/18.jpg"
     },
-    "picture": "http://mclaughlin.info/art_o'reilly",
+    "picture": "https://www.hotelartsbarcelona.com/app/uploads/2017/09/p41-bar-hotel-arts-barcelona-1920x740.jpg",
     "start": {},
-    "title": "Natus non excepturi laboriosam doloribus et."
+    "title": "Drinks a L'alimentation Generale"
   }
 ]
