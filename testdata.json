@@ -58,17 +58,5 @@
     "picture": "https://cdn.pixabay.com/photo/2017/04/07/01/01/bar-2209813_960_720.jpg",
     "start": {},
     "title": "Dinner Eiffel Tower"
-  },
-  {
-    "description": "Drinks a L'alimentation Generale Description could be quite long",
-    "id": "789123",
-    "organizer": {
-      "location": "geoLoc",
-      "name": "Pierre",
-      "picture": "https://randomuser.me/api/portraits/women/18.jpg"
-    },
-    "picture": "https://www.hotelartsbarcelona.com/app/uploads/2017/09/p41-bar-hotel-arts-barcelona-1920x740.jpg",
-    "start": {},
-    "title": "Drinks a L'alimentation Generale"
   }
 ]
