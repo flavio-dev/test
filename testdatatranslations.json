@@ -1,3 +1,6 @@
 {
-  "keyToTranslate": "some translated text"
+  "filter_bar_events": "Events",
+  "filter_bar_upcoming_events": "Upcoming Events",
+  "filter_bar_past_events": "Past Events",
+  "filter_bar_attending_events": "Attending"
 }
