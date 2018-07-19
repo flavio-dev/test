@@ -2,5 +2,6 @@
   "filter_bar_events": "Sort events",
   "filter_bar_upcoming_events": "Upcoming",
   "filter_bar_past_events": "Past",
-  "filter_bar_attending_events": "Attending"
+  "filter_bar_attending_events": "Attending",
+  "header_bar_create_event": "Create an event"
 }
