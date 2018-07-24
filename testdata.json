@@ -1,67 +1,37 @@
-[
+[  
   {
-    "description": "Dinner in Champs Elysee Description could be quite long",
     "id": "123456",
-    "organizer": {
-      "external_id": 123456789,
-      "location": "geoLoc",
-      "name": "Robert",
-      "picture": "https://randomuser.me/api/portraits/women/16.jpg"
-    },
     "picture": "https://u.tfstatic.com/restaurant_photos/581/201581/169/612/kombi-bar-vue-de-la-salle-87e4b.jpg",
     "start": "2018-09-08T18:02:41+02:00",
-    "title": "Dinner in Champs Elysee with a surprising quite long title that goes over 2 lines"
+    "title": "Dinner in Champs Elysee with a surprising quite long title that goes over 2 lines",
+    "venue": "La Jonquillerie"
   },
   {
-    "description": "Dinner Eiffel Tower  Description could be quite long",
     "id": "456789",
-    "organizer": {
-      "external_id": 456789123,
-      "location": "geoLoc",
-      "name": "Jacqueline",
-      "picture": "https://randomuser.me/api/portraits/women/17.jpg"
-    },
     "picture": "http://www.barbabette.com/site/assets/files/1016/amelielosier-201611-barbabette_web_2.750x0.jpg",
     "start": "2018-08-18T19:02:41+02:00",
-    "title": "Dinner Eiffel Tower"
+    "title": "Dinner Eiffel Tower",
+    "venue": "La Barbabette"
   },
   {
-    "description": "Drinks a L'alimentation Generale Description could be quite long",
     "id": "789123",
-    "organizer": {
-      "external_id": 789456123,
-      "location": "geoLoc",
-      "name": "Pierre",
-      "picture": "https://randomuser.me/api/portraits/women/18.jpg"
-    },
     "picture": "https://www.hotelartsbarcelona.com/app/uploads/2017/09/p41-bar-hotel-arts-barcelona-1920x740.jpg",
     "start": "2018-08-10T14:02:41+02:00",
-    "title": "Drinks a L'alimentation Generale"
+    "title": "Drinks a L'alimentation Generale title could be quite long",
+    "venue": "La Barbabette"
   },
   {
-    "description": "Dinner in Champs Elysee Description could be quite long",
     "id": "784512",
-    "organizer": {
-      "external_id": 951479845,
-      "location": "geoLoc",
-      "name": "Robert",
-      "picture": "https://randomuser.me/api/portraits/women/16.jpg"
-    },
     "picture": "https://u.tfstatic.com/restaurant_photos/581/201581/169/612/kombi-bar-vue-de-la-salle-87e4b.jpg",
     "start": "2018-10-08T20:02:41+02:00",
-    "title": "Dinner in Champs Elysee"
+    "title": "Dinner in Champs Elysee",
+    "venue": "Le chien fou"
   },
   {
-    "description": "Dinner Eiffel Tower  Description could be quite long",
     "id": "895623",
-    "organizer": {
-      "external_id": 159789456,
-      "location": "geoLoc",
-      "name": "Jacqueline",
-      "picture": "https://randomuser.me/api/portraits/women/17.jpg"
-    },
     "picture": "http://www.barbabette.com/site/assets/files/1016/amelielosier-201611-barbabette_web_2.750x0.jpg",
     "start": "2018-11-09T21:02:41+02:00",
-    "title": "Dinner Eiffel Tower"
+    "title": "Dinner in Abraracourcix",
+    "venue": "Abraracourcix"
   }
 ]
