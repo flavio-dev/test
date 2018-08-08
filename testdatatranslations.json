@@ -24,5 +24,8 @@
   "create_event_description": "Description",
   "create_event_description_text": "Give a short description",
   "create_event_create": "Create event",
-  "create_event_cancel": "Cancel"
+  "create_event_cancel": "Cancel",
+  "event_description": "Description",
+  "event_organiser": "Organiser"
+  "event_attendees": "Participants"
 }
