@@ -27,5 +27,9 @@
   "create_event_cancel": "Cancel",
   "event_description": "Description",
   "event_organizer": "Organizer",
-  "event_attendees": "Participants"
+  "event_attendees": "Participants",
+  "footer_terms_conditions": "Terms and Conditions",
+  "footer_terms_conditions_href": "https://www.attractiveworld.com/fr-fr/aw/cguv",
+  "footer_data_privacy": "Data Privacy",
+  "footer_data_privacy_href": "https://www.attractiveworld.com/fr-fr/aw/politique-protection-donnees"
 }
