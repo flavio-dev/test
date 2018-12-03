@@ -1,11 +1,11 @@
 {
   "indy_env": "prod",
-  "indy_site": "jdate",
+  "indy_site": "aw",
   "min_ios_version": "3.0.14",
   "min_android_version": "3.0.18",
   "min_ios_il_version": "3.0.0",
   "min_android_il_version": "4.0.0",
-  "maintenance": "false",
+  "maintenance": "true",
   "progress_text": "",
   "progress_text_il": "",
   "cur_web_version": "41-c3c44c1a576119bfca1821939250807a2b52ef46",
